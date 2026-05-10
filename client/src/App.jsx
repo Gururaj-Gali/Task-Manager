@@ -8,6 +8,7 @@ import { Navbar, Sidebar } from "./components";
 import {
   Dashboard,
   Login,
+  Signup,
   TaskDetail,
   Tasks,
   Trash,
@@ -111,6 +112,7 @@ const App = () => {
           </Route>
 
           <Route path='/log-in' element={<Login />} />
+          <Route path='/sign-up' element={<Signup />} />
         </Routes>
       </div>
 

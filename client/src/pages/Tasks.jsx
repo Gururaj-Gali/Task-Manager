@@ -45,7 +45,7 @@ const Tasks = () => {
       <div className='flex items-center justify-between mb-4'>
         <Title title={status ? `${status} Tasks` : "Tasks"} />
 
-        {!status && user?.isAdmin && (
+        {!status && user && (
           <Button
             label='Create Task'
             icon={<IoMdAdd className='text-lg' />}
@@ -59,12 +59,21 @@ const Tasks = () => {
         <Tabs tabs={TABS} setSelected={setSelected}>
           {!status && (
             <div className='w-full flex justify-between gap-4 md:gap-x-12 py-4'>
-              <TaskTitle label='To Do' className={TASK_TYPE.todo} />
+              <TaskTitle
+                label='To Do'
+                className={TASK_TYPE.todo}
+                onClick={() => setOpen(true)}
+              />
               <TaskTitle
                 label='In Progress'
                 className={TASK_TYPE["in progress"]}
+                onClick={() => setOpen(true)}
               />
-              <TaskTitle label='Completed' className={TASK_TYPE.completed} />
+              <TaskTitle
+                label='Completed'
+                className={TASK_TYPE.completed}
+                onClick={() => setOpen(true)}
+              />
             </div>
           )}
 

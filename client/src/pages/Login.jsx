@@ -102,6 +102,16 @@ const Login = () => {
                 className='w-full h-10 bg-blue-700 text-white rounded-full'
               />
             )}
+
+            <p className='text-center text-sm text-gray-600 dark:text-gray-400'>
+              Don't have an account?{" "}
+              <span
+                onClick={() => navigate("/sign-up")}
+                className='text-blue-600 hover:underline cursor-pointer font-semibold'
+              >
+                Sign up here
+              </span>
+            </p>
           </form>
         </div>
       </div>
